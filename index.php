@@ -2,12 +2,22 @@
 
 	// Router
 
-	var_dump($_GET);
-
 
 	// existe una variable de seccion?
 	if(isset($_GET["section"])){
 
-		// llevarlo a la seccion especificada
+		$section = $_GET["section"];
+
+		if(!file_exists("controllers/{$section}Controller.php")){
+			$section = "error404";	
+		}
+
+		
+	}else{ // si no existe section
+
+		$section = "landing";
 	}
+
+
+	include "controllers/{$section}Controller.php";
  ?>
