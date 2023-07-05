@@ -1,7 +1,7 @@
 <?php 
 
 	// Router
-
+	include 'lib/primel.php';
 
 	// existe una variable de seccion?
 	if(isset($_GET["section"])){

@@ -12,24 +12,48 @@
 	class User
 	{
 
-		public $nombre;
+		public $email;
+		public $pass;
+		public $status;
 		
-		function __construct()
+		function __construct($email, $pass)
 		{
-			echo "Hola soy un usuario<br>";
+			$this->email = $email;
+			$this->pass = md5($pass);
+			$this->status = "offline";
 		}
 
-		public function hola(){
-			$this->nombre = "Duende";
+		public function login($email, $pass){
+			
+			if($email==''){
+				return "No ingreso email";
+			}	
+
+			if($pass==''){
+				return "No ingreso contraseña";
+			}
+
+			if($email == $this->email){
+
+				if(md5($pass) == $this->pass){
+
+					$this->status = "online";
+
+					return true;
+
+				}else{
+
+					return "Credenciales incorrectas";
+
+				}
+
+			}else{
+				return "Credenciales incorrectas";
+			}
+
 		}
 	}
 	
-
-	$usuario = new User;
-
-	$usuario->hola();
-
-	var_dump($usuario);
 
 
 

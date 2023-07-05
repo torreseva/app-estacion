@@ -1,11 +1,9 @@
 <?php 
 
-	
-	 $tpl = file_get_contents('views/landingView.html');
+	$tpl = new Primel('views/landingView.html');
 
-	 $cant_usuarios = 45;
+	$tpl->assign("usuarios", 6666);
+	$tpl->assign("ACTUAL_YEAR",date('Y'));
 
-	 $tpl = str_replace("{{usuarios}}", $cant_usuarios, $tpl);
-
-	 echo $tpl;
+	$tpl->printToScreen();
  ?>
