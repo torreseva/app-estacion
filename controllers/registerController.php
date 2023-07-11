@@ -1,5 +1,6 @@
 <?php 
 
-	include 'views/registerView.html';
+	$tpl = new Primel('views/registerView.html');
 
+	$tpl->printToScreen();
  ?>
