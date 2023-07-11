@@ -11,8 +11,14 @@
 		
 		function __construct($url_tpl)
 		{
-			$this->url_tpl = $url_tpl;
-			$this->tpl = file_get_contents($url_tpl);
+			if(!file_exists($url_tpl)){
+
+				echo "<b>Error en plantilla ({$url_tpl}):</b> No existe la plantilla <u>$url_tpl</u>";
+				exit();
+			}else{
+				$this->url_tpl = $url_tpl;
+				$this->tpl = file_get_contents($url_tpl);
+			}
 		}
 
 		/**
