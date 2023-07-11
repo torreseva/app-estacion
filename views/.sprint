@@ -1,0 +1,3 @@
+-Normalizar el controlador 404
+-Normalizar el controlador register
+-Realizar el control de variables dentro del motor de plantillas para que informe de errores en el caso de que la variable.

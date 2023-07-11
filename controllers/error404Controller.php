@@ -1,5 +1,7 @@
 <?php 
 
-	include 'views/error404View.html';
+	$tpl = new Primel('views/error404View.html');
+
+	$tpl->printToScreen();
 
  ?>
