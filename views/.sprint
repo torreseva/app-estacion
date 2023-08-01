@@ -6,4 +6,5 @@
 *1006-Crear una carpeta que va a contener los archivos static (los que no cambian)
 -darle un diseño acorde a lo que es la app
 -embellecer urls.
--links con la ruta completa a mi dominiosssss
+*1009-links con la ruta completa a mi dominio
+*1010-cache habilitada por código utilizando constante CACHE

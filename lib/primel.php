@@ -10,8 +10,9 @@
 		public $tpl = '';
 		public $url_tpl = '';
 		
-		function __construct($url_tpl, $cache=true)
+		function __construct($url_tpl)
 		{
+
 			if(!file_exists($url_tpl)){
 
 				echo "<b>Error en plantilla ({$url_tpl}):</b> No existe la plantilla <u>$url_tpl</u>";
@@ -21,8 +22,17 @@
 			$this->url_tpl = $url_tpl;
 			$this->tpl = file_get_contents($url_tpl);
 
+			// comprobamos que exista la variable de plantilla
 			if($this->testVar("URL_WEB")){
 				$this->assign("URL_WEB", URL_WEB);
+			}
+
+			// comprobamos que la cache este o no habilitada
+			if($this->testVar("CACHE")){
+				if(CACHE)
+					$this->assign("CACHE","");
+				else
+					$this->assign("CACHE","?cache=".date("YmdHis"));
 			}
 		}
 

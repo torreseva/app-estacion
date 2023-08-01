@@ -3,7 +3,8 @@
 	// Router
 
 	define("URL_WEB", "http://huertaenred.com.ar");
-	
+	define("CACHE", false);
+
 	include 'lib/primel.php';
 
 	// existe una variable de seccion?
