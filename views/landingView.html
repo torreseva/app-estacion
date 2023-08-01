@@ -4,21 +4,47 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Huerta en red</title>
+
+	<link rel="stylesheet" type="text/css" href="static/css/estilos.css">
+
 </head>
 <body>
 
-	<h1>Bienvenido a huerta en red</h1>
 
-	<p>Ya tenemos {{usuarios}} usuarios registrados</p>
+	<header>
 
-	<a href="?section=login">Login</a>
-	<a href="?section=register">Register</a>
-
-	<footer>
+		<div id="header__web">
 		
-		{{ACTUAL_YEAR}}
+			<div id="header__web__logo">
+				<img src="" alt="">
+			</div>
 
-		{{author}}
+			<div id="header__web__name">
+				Huerta en Red
+			</div>
+
+		</div>
+
+		<nav>
+			<a href="?section=login">Login</a>
+			<a href="?section=register">Register</a>
+		</nav>		
+
+	</header>
+
+
+	<content>
+		<p>Ya tenemos {{usuarios}} usuarios registrados</p>	
+	</content>
+	
+	<footer>
+
+		<div id="footer__author">
+
+			{{ACTUAL_YEAR}}
+
+			{{author}}
+		</div>
 	</footer>
 
 </body>

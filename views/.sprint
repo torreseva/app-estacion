@@ -1,7 +1,9 @@
 *1000-Normalizar el controlador 404 
 *1001-Normalizar el controlador register
-1002-Realizar el control de variables dentro del motor de plantillas para que informe de errores en el caso de que la variable no exista.
+*1002-Realizar el control de variables dentro del motor de plantillas para que informe de errores en el caso de que la variable no exista.
 -Agregar conexion contra la base de datos del userModel.
 -Separar las plantillas en secciones que se puedan reutilizar (como el encabezado el pie de pagina)
 -Crear una carpeta que va a contener los archivos static (los que no cambian)
--darle un diseño acorde a lo que es la app 
+-darle un diseño acorde a lo que es la app
+-embellecer urls.
+-links con la ruta completa a mi dominiosssss
