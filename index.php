@@ -1,6 +1,9 @@
 <?php 
 
 	// Router
+
+	define("URL_WEB", "http://huertaenred.com.ar");
+	
 	include 'lib/primel.php';
 
 	// existe una variable de seccion?
