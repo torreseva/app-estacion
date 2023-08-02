@@ -5,6 +5,6 @@
 -Separar las plantillas en secciones que se puedan reutilizar (como el encabezado el pie de pagina)
 *1006-Crear una carpeta que va a contener los archivos static (los que no cambian)
 -darle un diseño acorde a lo que es la app
--embellecer urls.
+*1008-Embellecer urls utilizando apache.
 *1009-links con la ruta completa a mi dominio
 *1010-cache habilitada por código utilizando constante CACHE
