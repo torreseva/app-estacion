@@ -6,20 +6,20 @@
 
 	$usuario = new User("pablo@gmail.com", "pripri");
 
-	$error = "";
+	$response = array("errno" => 0, "error" => "");
 
 	if(isset($_POST['btn_submit'])){
 
-		$error= $usuario->login($_POST['txt_email'], $_POST['txt_pass']);
+		$response = $usuario->login($_POST['txt_email'], $_POST['txt_pass']);
 
-		if($error===true){
+		if($response["errno"]==200){
 			header('Location: ?section=panel');
 		}
 
 	}
 
 
-	$tpl->assign("MSG", $error);
+	$tpl->assign("MSG", $response["error"]);
 	$tpl->assign("ACTUAL_YEAR",date('Y'));
 
 

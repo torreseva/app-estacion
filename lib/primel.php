@@ -52,7 +52,7 @@
 		 * */
 		public function assign($needle, $value){
 
-			if(strstr($this->tpl, "{{{$needle}}}")){
+			if($this->testVar($needle)){
 				$this->tpl = str_replace("{{{$needle}}}", $value, $this->tpl);
 			}else{
 				echo "<b>Error en plantilla ({$this->url_tpl}):</b> No existe la variable <u>$needle</u>";

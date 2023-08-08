@@ -11,7 +11,6 @@
 	 */
 	class User
 	{
-
 		public $email;
 		public $pass;
 		public $status;
@@ -26,11 +25,11 @@
 		public function login($email, $pass){
 			
 			if($email==''){
-				return "No ingreso email";
+				return array("errno" => 401, "error" => "No ingreso email");
 			}	
 
 			if($pass==''){
-				return "No ingreso contraseña";
+				return array("errno" => 402, "error"=>"No ingreso contraseña");
 			}
 
 			if($email == $this->email){
@@ -39,16 +38,16 @@
 
 					$this->status = "online";
 
-					return true;
+					return array("errno" => 200, "error" => "Se logueo correctamente");
 
 				}else{
 
-					return "Credenciales incorrectas";
+					return array("errno"=> 403,"Credenciales incorrectas");
 
 				}
 
 			}else{
-				return "Credenciales incorrectas";
+				return array("errno" => 404, "error" => "Credenciales incorrectas");
 			}
 
 		}
