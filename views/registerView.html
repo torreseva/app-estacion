@@ -8,6 +8,27 @@
 <body>
 
 	<h1>Bienvenido al registro</h1>
+
+	<form action="" method="POST">
+
+				{{MSG}}
+		
+			<label for="txt_email">Email
+			<input type="email" name="txt_email" required>
+			</label>
+
+			<label for="txt_pass">Contraseña
+			<input type="password" name="txt_pass" required>
+			</label>
+
+			<input type="submit" name="btn_submit" value="Registrar">
+
+	</form>
+
+	<footer>
+		
+		{{ACTUAL_YEAR}}
+	</footer>
 	
 </body>
 </html>

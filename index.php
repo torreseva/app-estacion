@@ -6,6 +6,15 @@
 	define("URL_WEB", "http://huertaenred.com.ar");
 	define("CACHE", false);
 
+
+	define("DB_HOST", "localhost");
+	define("DB_USER", "huertaenred");
+	define("DB_PASS", "huertaenred1234");
+	define("DB_NAME", "huertaenred");
+	define("DB_PORT", 3306);
+
+	include 'models/dbAbstract.php';
+	include 'models/userModel.php';
 	// incluimos el motor de plantillas
 	include 'lib/primel.php';
 
