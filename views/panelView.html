@@ -3,11 +3,145 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Huerta en red</title>
-</head>
-<body>
+	<title>APP-CLIMA</title>
+	<script src="https://kit.fontawesome.com/2e15dbbd17.js" crossorigin="anonymous"></script>
+	<style type="text/css">		
 
-	<h1>Bienvenido al Panel de usuario</h1>
+*{
+	font-family: sans-serif;
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+	/*align-items: center;
+	justify-content: center;
+	flex-direction: column;*/
+}
+	.boton__apodo {
+		color:#000;
+	  font-size: 1.5rem;
+	  font-weight: bold;
+	}
+	.boton {
+	background-color: #B8C5CA;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23afbdc1'/%3E%3Cstop offset='1' stop-color='%23afbdc1' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2374b2d7'/%3E%3Cstop offset='1' stop-color='%2374b2d7' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2367add2'/%3E%3Cstop offset='1' stop-color='%2367add2' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23B8C5CA'/%3E%3Cstop offset='1' stop-color='%23B8C5CA' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23A6B4B8'/%3E%3Cstop offset='1' stop-color='%23A6B4B8' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%231992FB'/%3E%3Cstop offset='1' stop-color='%231992FB' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+		background-attachment: fixed;
+		background-size: cover;
+	  border: solid 3px;
+	  /*background: #98c2d4;
+	  color: #030728;*/
+	  padding: 1rem;
+	  border-radius: 30px;
+	  width: 350px;
+	  margin-bottom: 0.5em;
+	}
+
+	.boton:hover {
+/*    background: linear-gradient(135deg, rgb(202, 202, 202), rgb(178, 76, 215));*/
+	background-color: #ECF0F1;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%239b90a2'/%3E%3Cstop offset='1' stop-color='%239b90a2' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23aab8a8'/%3E%3Cstop offset='1' stop-color='%23aab8a8' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%235d5957'/%3E%3Cstop offset='1' stop-color='%235d5957' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ECF0F1'/%3E%3Cstop offset='1' stop-color='%23ECF0F1' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23454242'/%3E%3Cstop offset='1' stop-color='%23454242' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2376726C'/%3E%3Cstop offset='1' stop-color='%2376726C' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+	}
+	.boton__visitas {
+/*	  border: solid 1px;*/
+	  text-align: right;
+	  color:red;
+
+	}
+
+	body{
+
+			background-color: #580907;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%234d0d36'/%3E%3Cstop offset='1' stop-color='%234d0d36' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%232c0504'/%3E%3Cstop offset='1' stop-color='%232c0504' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%231b0a22'/%3E%3Cstop offset='1' stop-color='%231b0a22' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23580907'/%3E%3Cstop offset='1' stop-color='%23580907' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23351343'/%3E%3Cstop offset='1' stop-color='%23351343' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23000000'/%3E%3Cstop offset='1' stop-color='%23000000' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+				background-attachment: fixed;
+				background-size: cover;
+	}
+
+	.estacion-app{
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+	}
+
+	#listado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+	</style>
+</head>
+<body >
+
+	<template id="tpl__boton">
+		<a href="" class="detalle_boton">
+		<div class="boton">
 	
+		<div class="boton__apodo">
+			<i class="fa-solid fa-sun" style="color: #000000;"></i>
+
+			<div class="apodo">
+
+				
+			</div>
+		</div>
+		<div class="boton__ubicacion">
+			<i class="fa-solid fa-location-dot" style="color: #ff0000;"></i>
+			<div class="ubicacion"></div>
+
+		</div>
+		<div class="boton__visitas">
+	    <i class="fa-solid fa-tower-observation" style="color: #16072c;"></i>
+		<div class="visitas"></div>
+		</div>
+
+	</div>
+</a>
+	</template>
+
+
+	<div id="listado">
+	</div>
+
+	<script type="text/javascript">
+
+		getEstaciones().then(data=>{
+
+			data.forEach(roow=>{
+				console.log(roow);
+				// listado.innerHTML +=(roow.chipId +("<br>"));
+				createboton(roow);
+				// console.log(roow.chipId);
+			})
+		
+		});
+
+		async function getEstaciones(){
+
+			const response = await fetch("api/index.php" );
+
+			const data = await response.json();
+
+			return data;
+		}
+
+		function createboton (info) {
+				const tpl = tpl__boton.content
+				const clon = tpl.cloneNode(true);
+
+				// clon.querySelector(".card").setAttribute("id-card", "carnet-"+info.id);
+				clon.querySelector(".visitas").innerHTML = info.visitas
+				clon.querySelector(".ubicacion").innerHTML = info.ubicacion
+				clon.querySelector(".apodo").innerHTML = info.apodo
+				clon.querySelector(".detalle_boton").href = "detalle/"+info.chipId
+
+
+				listado.appendChild(clon)
+		}
+		
+
+		
+	</script>
 </body>
 </html>

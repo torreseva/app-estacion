@@ -1,50 +1,41 @@
-:root{
-	--bg-color: #e8fccf;
-	--color: #96e072;
-	--bg-color-header: #134611;
-	--bg-color-footer: #3e8914;
-}
-
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: sans-serif;
-}
-
-body{
-	background-color: #580907;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>app clima</title>
+	<style type="text/css">
+		
+	#chipId{
+		display: none;
+	}
+	body{
+		background-color: #580907;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%234d0d36'/%3E%3Cstop offset='1' stop-color='%234d0d36' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%232c0504'/%3E%3Cstop offset='1' stop-color='%232c0504' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%231b0a22'/%3E%3Cstop offset='1' stop-color='%231b0a22' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23580907'/%3E%3Cstop offset='1' stop-color='%23580907' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23351343'/%3E%3Cstop offset='1' stop-color='%23351343' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23000000'/%3E%3Cstop offset='1' stop-color='%23000000' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
 	background-attachment: fixed;
 	background-size: cover;
 	}
-header {
-	background-color: var(--bg-color-footer);
-	/* color: var(--color); */
-	border: solid 1px red;
-	display: flex;
-	justify-content: space-between;
-	height: 15vh;
-}
+	h1{
+		color: white;
+	}
+	</style>
+</head>
+<body>
 
-#header__web {
-	border: solid 1px blue;
-	display: flex;
-	align-items: center;
-}
+	<h1>Detalle</h1>
+	<div id="chipId">{{chipId}}</div>
 
-#header__web__name {
-	font-size: 2rem;
-	font-weight: bold;
-	color: white;
-}
 
-h1{
-	text-align: center;
-	color: white;
-	/*background-color: var(--bg-color);
-	border: solid 1px green;*/
-}
-.lan{
-	text-align: center;
-}
+	<script type="text/javascript">
+			async function getEstaciones(){
+
+			const response = await fetch("api/estacion.php?chipId=" + chipId.innerHTML );
+
+			const data = await response.json();
+
+			return data;
+		}
+</script>
+ 
+</body>
+</html>

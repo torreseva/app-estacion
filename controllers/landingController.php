@@ -7,10 +7,10 @@
 		var_dump($_SECTION[1]);
 	}
 	
-	$tpl->assign("usuarios", 6666);
-	$tpl->assign("ACTUAL_YEAR",date('Y'));
+	// $tpl->assign("usuarios", 6666);
+	// $tpl->assign("ACTUAL_YEAR",date('Y'));
 
-	$tpl->assign("author", "mattprofe@mb");
+	// $tpl->assign("author", "mattprofe@mb");
 
 	$tpl->printToScreen();
  ?>
